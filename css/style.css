@@ -1,0 +1,45 @@
+.title {
+	color: white;
+}
+
+.words {
+	color: white;
+}
+
+.words2 {
+	color: rgb(216, 216, 216);
+}
+
+.home-img {
+	border-radius: 10px;
+}
+
+body {
+	background-image: url(../Images/Blurphoto.png);
+	background-position: 50% 15%;
+	background-attachment: fixed;
+}
+
+.gradient-background {
+	/* background: linear-gradient(-45deg, #51d1ee, #58f3e6, #5edeaf, #61fd98, #60ef69); */
+	/* background: linear-gradient(-45deg, #C8F4FA, #B1DED8, #D1F5E6, #B1DEBF, #C8FAC9); */
+	/* background: linear-gradient(-45deg, #3a434b, #586672, #8ea6ba); */
+	background-size: 400% 400%;
+}
+
+.inline {
+    display: inline-flex;
+    gap: 15px;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
