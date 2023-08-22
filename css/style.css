@@ -24,7 +24,7 @@ body {
 	/* background: linear-gradient(-45deg, #51d1ee, #58f3e6, #5edeaf, #61fd98, #60ef69); */
 	/* background: linear-gradient(-45deg, #C8F4FA, #B1DED8, #D1F5E6, #B1DEBF, #C8FAC9); */
 	/* background: linear-gradient(-45deg, #3a434b, #586672, #8ea6ba); */
-	background-size: 400% 400%;
+	background-size: cover;
 }
 
 .inline {
