@@ -18,13 +18,9 @@ body {
 	background-image: url(../Images/Blurphoto.png);
 	background-position: 50% 15%;
 	background-attachment: fixed;
-}
-
-.gradient-background {
-	/* background: linear-gradient(-45deg, #51d1ee, #58f3e6, #5edeaf, #61fd98, #60ef69); */
-	/* background: linear-gradient(-45deg, #C8F4FA, #B1DED8, #D1F5E6, #B1DEBF, #C8FAC9); */
-	/* background: linear-gradient(-45deg, #3a434b, #586672, #8ea6ba); */
 	background-size: cover;
+	background-color: rgb(0, 0, 0);
+	overflow: scroll;
 }
 
 .inline {
@@ -32,14 +28,53 @@ body {
     gap: 15px;
 }
 
-@keyframes gradient-animation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+
+
+/* Fade-in animation for the entire page on load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
+.animate {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Slide-in from left for the profile image */
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.home-img {
+    animation: slideFromLeft 1.5s forwards;
+}
+
+/* Slide-in from bottom for the buttons */
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.btn-outline-light {
+    animation: slideFromBottom 1.5s forwards;
+    animation-delay: 0.5s; /* Delay to allow the image to slide in first */
+}
+
+
