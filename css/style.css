@@ -80,6 +80,10 @@ body {
     }
 }
 
+.animate {
+	animation: fadeIn 1.5s ease-in-out;
+}	
+
 .home-img {
     animation: slideFromLeft 1.5s forwards;
 }
@@ -107,7 +111,3 @@ body {
 .navbar-nav .nav-link {
 	font-size: 1.15rem;  /* Adjust this value as desired */
 }
-
-.animate {
-	animation: fadeIn 1.5s ease-in-out;
-}	
