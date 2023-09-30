@@ -28,6 +28,13 @@ body {
     gap: 15px;
 }
 
+.nav-link {
+	color: rgb(200, 200, 200);
+}
+
+.nav-link:hover {
+	color: rgb(225, 225, 225);
+}
 
 
 /* Fade-in animation for the entire page on load */
@@ -40,11 +47,6 @@ body {
     }
 }
 
-.animate {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Slide-in from left for the profile image */
 @keyframes slideFromLeft {
     from {
         transform: translateX(-100%);
@@ -56,11 +58,17 @@ body {
     }
 }
 
-.home-img {
-    animation: slideFromLeft 1.5s forwards;
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-/* Slide-in from bottom for the buttons */
 @keyframes slideFromBottom {
     from {
         transform: translateY(100%);
@@ -72,9 +80,34 @@ body {
     }
 }
 
-.btn-outline-light {
-    animation: slideFromBottom 1.5s forwards;
-    animation-delay: 0.5s; /* Delay to allow the image to slide in first */
+.home-img {
+    animation: slideFromLeft 1.5s forwards;
 }
 
+@media (min-width: 992px){
+	.home-img {
+		animation: slideFromTop 2.0s forwards;
+	}
+}
 
+.sliding {
+    animation: slideFromBottom 1.5s forwards;
+    animation-delay: 0.5s;
+	opacity: 0;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+@media (min-width: 992px){
+	.sliding {
+		animation: slideFromLeft 1.5s forwards;
+		animation-delay: 0.5s;
+	}
+}
+
+.navbar-nav .nav-link {
+	font-size: 1.15rem;  /* Adjust this value as desired */
+}
+
+.animate {
+	animation: fadeIn 1.5s ease-in-out;
+}	
